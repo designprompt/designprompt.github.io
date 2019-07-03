@@ -1,0 +1,1154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Design Prompt Randomizer</title>
+	
+	<style>
+		body {
+			font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+			margin: 50px auto;
+			max-width: 60%;
+			color: #acacac;
+			font-size: 1.2em;
+		}
+		
+		h2 {
+			font-size: 2.5em;
+			border-bottom: 5px solid #1f8daf;
+		}
+		
+		option {
+			padding: 5px 2px 1px;
+		}
+		
+		.forms {
+			overflow: hidden;
+		}
+		
+		#submitBtn {
+			border: none;
+			background: #1f8daf;
+			color: #fff;
+			font-size: 1.5em;
+			padding: 10px;
+			margin: 20px auto;
+			width: 50%;
+			text-align: center;
+		}
+		
+		#submitBtn:hover{
+			cursor: pointer;
+			background: #127492;
+		}
+		
+		select {
+			padding: 20px;
+			border: 1px solid #efefef;
+			font-size: 1em;
+			color: #acacac;
+			float: left;
+			margin-right: 20px;
+		}
+		
+		.category {
+			color: #fff;
+			background: #127492;
+		}
+		
+		
+		.resultscontainer {
+			display: none;
+			color: #1f8daf;
+			font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+		}
+		
+		.resultsconp {
+			font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+		}
+		
+		
+		.results {
+			margin: 0 auto;
+			border: 10px solid #d9f6ff;
+			background: #1f8daf;
+			color: #fff;
+			padding: 20px;
+			font-family: "sans-serif";
+			margin: 20px 0;
+		}
+		
+		.results p {
+			font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+		}
+		
+		#resultsp {
+			font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+			font-size: 2em;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<h2>Design Prompt Randomizer</h2>
+	<p>Select a category or subcategory from each drop-down to get a randomized item from that category. Category titles will include all subcategories (e.g. ANIMALS will include mammals, insects, birds, fish, reptiles and prehistoric). Combine the items for interesting design ideas!</p>
+	<p>Happy designing!</p>
+	<div class="forms">
+	<form class="firstItem">
+		<select name="firstName" id="firstName">
+			<option value="all">ALL</option>
+			<option value="none">NONE</option>
+			<option class="category" value="animals">ANIMALS</option>
+			<option value="mammals">Mammals</option>
+			<option value="insects">Insects</option>
+			<option value="birds">Birds</option>
+			<option value="reptiles">Reptiles</option>
+			<option value="fish">Fish/Aquatic</option>
+			<option value="prehistoric">Prehistoric</option>
+			<option value="mythologicalcreature">Mythological Creature</option>
+			
+			<option class="category" value="characters">CHARACTERS</option>
+			<option value="chartype">Type (Hero, Villain)</option>
+			<option value="race">Race</option>
+			<option value="mythology">Mythology (culture)</option>
+			<option value="occupation">Occupation</option>
+			<option value="personality">Personality Trait</option>
+			
+			<option class="category" value="environments">ENVIRONMENTS</option>
+			<option value="landscape">Landscape</option>
+			<option value="location">Location</option>
+			<option value="architecture">Architecture</option>
+			<option value="planet">Planet</option>
+			
+			<option class="category" value="vehicles">VEHICLES / PROPS</option>
+			<option value="cars">Cars</option>
+			<option value="aircraft">Aircraft</option>
+			<option value="military">Military</option>
+			<option value="boats">Boats</option>
+			<option value="projweapon">Projectile Weapon</option>
+			<option value="meleeweapon">Melee Weapon</option>
+			<option value="props">Misc. Prop</option>
+		</select>
+	</form>
+	<form class="secondItem">
+		<select name="firstName" id="secondName">
+			<option value="none">NONE</option>
+			<option value="all">ALL</option>
+			<option class="category" value="animals">ANIMALS</option>
+			<option value="mammals">Mammals</option>
+			<option value="insects">Insects</option>
+			<option value="birds">Birds</option>
+			<option value="reptiles">Reptiles</option>
+			<option value="fish">Fish/Aquatic</option>
+			<option value="prehistoric">Prehistoric</option>
+			<option value="mythologicalcreature">Mythological Creature</option>
+			
+			<option class="category" value="characters">CHARACTERS</option>
+			<option value="chartype">Type (Hero, Villain)</option>
+			<option value="race">Race</option>
+			<option value="mythology">Mythology (culture)</option>
+			<option value="occupation">Occupation</option>
+			<option value="personality">Personality Trait</option>
+			
+			<option class="category" value="environments">ENVIRONMENTS</option>
+			<option value="landscape">Landscape</option>
+			<option value="location">Location</option>
+			<option value="architecture">Architecture</option>
+			<option value="planet">Planet</option>
+			
+			<option class="category" value="vehicles">VEHICLES / PROPS</option>
+			<option value="cars">Cars</option>
+			<option value="aircraft">Aircraft</option>
+			<option value="military">Military</option>
+			<option value="boats">Boats</option>
+			<option value="projweapon">Projectile Weapon</option>
+			<option value="meleeweapon">Melee Weapon</option>
+			<option value="props">Misc. Prop</option>
+		</select>
+	</form>
+	<form class="thirdItem">
+		<select name="firstName" id="thirdName">
+			<option value="none">NONE</option>
+			<option value="all">ALL</option>
+			<option class="category" value="animals">ANIMALS</option>
+			<option value="mammals">Mammals</option>
+			<option value="insects">Insects</option>
+			<option value="birds">Birds</option>
+			<option value="reptiles">Reptiles</option>
+			<option value="fish">Fish/Aquatic</option>
+			<option value="prehistoric">Prehistoric</option>
+			<option value="mythologicalcreature">Mythological Creature</option>
+			
+			<option class="category" value="characters">CHARACTERS</option>
+			<option value="chartype">Type (Hero, Villain)</option>
+			<option value="race">Race</option>
+			<option value="mythology">Mythology (culture)</option>
+			<option value="occupation">Occupation</option>
+			<option value="personality">Personality Trait</option>
+			
+			<option class="category" value="environments">ENVIRONMENTS</option>
+			<option value="landscape">Landscape</option>
+			<option value="location">Location</option>
+			<option value="architecture">Architecture</option>
+			<option value="planet">Planet</option>
+			
+			<option class="category" value="vehicles">VEHICLES / PROPS</option>
+			<option value="cars">Cars</option>
+			<option value="aircraft">Aircraft</option>
+			<option value="military">Military</option>
+			<option value="boats">Boats</option>
+			<option value="projweapon">Projectile Weapon</option>
+			<option value="meleeweapon">Melee Weapon</option>
+			<option value="props">Misc. Prop</option>
+		</select>
+	</form>
+	</div>
+	<div class="button" id="submitBtn" onclick="submit()">SUBMIT</div>
+	
+	<div class="resultscontainer">
+		<p class="resultsconp">Your randomized concept is:</p>
+	<div class="results">
+		<p id="resultsp"></p>
+	</div>
+	</div>
+	
+	<script>
+		const dictionary = { 
+			"mammals" : [
+				"Cow", 
+				"Horse", 
+				"Pig", 
+				"Donkey", 
+				"Elephant",
+				"Camel",
+				"Zebra",
+				"Gerenuk",
+				"Honey Badger",
+				"Deer",
+				"Moose",
+				"Caribou",
+				"Mouse",
+				"Echidna",
+				"Platypus",
+				"Opossum",
+				"Kultarr",
+				"Kowari",
+				"Eastern Quoll",
+				"Wombat",
+				"Bandicoot",
+				"Greater Bilby",
+				"Koala",
+				"Wombat",
+				"Greater Glider",
+				"Pygmy Glider",
+				"Red Kangaroo",
+				"Quokka",
+				"Doria's Tree Kangaroo",
+				"Wallaby",
+				"Sengi",
+				"Hyrax",
+				"Armadillo",
+				"Sloth",
+				"Anteater",
+				"Pika",
+				"Jackrabbit",
+				"Arctic Hare",
+				"Beaver",
+				"Woodchuck",
+				"Squirrel",
+				"Rat",
+				"Vole",
+				"Mouse",
+				"Indian Giant Squirrel",
+				"Marmot",
+				"Chipmunk",
+				"Capybara",
+				"Grey Slender Loris",
+				"Ring-tailed Lemur",
+				"Western Tarsier",
+				"Grey Woolly Monkey",
+				"Geoffrey's Spider Monkey",
+				"Venezuelan Red Howler",
+				"White-faced Saki",
+				"Monk Saki",
+				"Brown Capuchin",
+				"Black-capped Squirrel Monkey",
+				"Geoffrey's Marmoset",
+				"Mandrill",
+				"Proboscis Monkey",
+				"Olive Baboon",
+				"De Brazza's Monkey",
+				"Black-crested Gibbon",
+				"Chimpanzee",
+				"Western Gorilla",
+				"Bornean Orangutan",
+				"Rodrigues Flying Fox",
+				"Greater Bulldog Bat",
+				"Vampire Bat",
+				"Bown Long-eared Bat",
+				"Hedgehog",
+				"Mole",
+				"Pangolin",
+				"Red Fox",
+				"Fennec Fox",
+				"Grey Fox",
+				"Arctic Fox",
+				"Maned Wolf",
+				"Raccoon",
+				"Coyote",
+				"Dingo",
+				"Bat-eared Fox",
+				"Gray Wolf",
+				"American Black Bear",
+				"Polar Bear",
+				"Sun Bear",
+				"Sloth Bear",
+				"Grizzly Bear",
+				"Giant Panda",
+				"Red Panda",
+				"Brown Bear",
+				"Northern Fur Seal",
+				"South American Sea Lion",
+				"Leopard Seal",
+				"Elephant Seal",
+				"Baikal Seal",
+				"Harp Seal",
+				"Ferret",
+				"Weasel",
+				"River Otter",
+				"Meerkat",
+				"Flat-headed Cat",
+				"Iberian Lynx",
+				"Caracal",
+				"Sand Cat",
+				"Ocelot",
+				"Tiger",
+				"Leopard",
+				"Puma",
+				"Snow Leopard",
+				"Cheetah",
+				"Lion",
+				"Jaguar",
+				"Spotted Hyena",
+				"Aardwolf",
+				"Zebra",
+				"Sumatran Rhinoceros",
+				"Indian Rhinoceros",
+				"White Rhinoceros",
+				"Giant Forest Hog",
+				"Warthog",
+				"Red River Hog",
+				"Hippopotamus",
+				"Guanaco",
+				"Bactrian Camel",
+				"Fallow Deer",
+				"Red Deer",
+				"White-tailed Deer",
+				"Pronghorn",
+				"Caribou",
+				"Okapi",
+				"Giraffe",
+				"Kudu",
+				"Eland",
+				"Bongo",
+				"Alpine Ibex",
+				"Bighorn Sheep",
+				"Baleen Whale",
+				"Gray Whale",
+				"Humpback Whale",
+				"Beluga",
+				"Ganges River Dolphin",
+				"Finless Porpoise",
+				"Dusky Dolphin",
+				"Narwhal",
+				"Dall's Porpoise",
+				"Tucuxi",
+				"Risso's Dolphin",
+				"Bottnose Dolphin",
+				"Pacific White-sided Dolphin",
+				"Orca Whale",
+				"Short-finned Pilot Whale",
+				"Sperm Whale"
+		],
+		
+		"insects" : [
+			"Weevil",
+			"Hercules Beetle",
+			"Ladybug",
+			"Tarantula",
+			"Moth",
+			"Scorpion",
+			"Caterpillar",
+			"Butterfly",
+			"Worm",
+			"Ant",
+			"Cockroach",
+			"Grasshopper",
+			"Mantis",
+			"Black Widow Spider",
+			"Cricket",
+			"Fly",
+			"Wasp",
+			"Honey Bee",
+			"Bumble Bee",
+			"Mayfly",
+			"Narrow-winged Damselfly",
+			"Stalk-winged Damselfly",
+			"Leaf Insect",
+			"Cricket",
+			"Praying Mantis",
+			"Cicadella Viridis",
+			"Firefly",
+			"Longhorn Beetle",
+			"Leaf Beetle",
+			"Ladybug",
+			"Weevil",
+			"Woolly Weevil",
+			"Diving Beetle",
+			"Stag Beetle",
+			"Scarab Beetle",
+			"Scorpionfly",
+			"Mosquito",
+			"Rove Beetle",
+			"Blow Fly",
+			"Horse Fly",
+			"Hornet"
+		],
+		
+		"birds" : [
+			"Bald Eagle",
+			"Hawk",
+			"Sparrow",
+			"Magpie",
+			"Robin",
+			"Ostrich",
+			"Emu",
+			"Emperor Penguin",
+			"Parrot",
+			"Crow",
+			"Raven",
+			"Dove",
+			"Swan",
+			"Pigeon",
+			"Rockhopper Penguin",
+			"Bluejay",
+			"Cardinal",
+			"Woodpecker",
+			"Southern Cassowary",
+			"North Island Kiwi",
+			"Gunnison Sage-Grouse",
+			"Temminck's Tragopan",
+			"Greylag Goose",
+			"Canada Goose",
+			"Mallard",
+			"Mandarin Duck",
+			"Blue Duck",
+			"Humboldt Penguin",
+			"Chinstrap Penguin",
+			"Northern Flumar",
+			"Great Crested Grebe",
+			"Hooded Grebe",
+			"Greater Flamingo",
+			"Grey Heron",
+			"Great Egret",
+			"Marabou Stork",
+			"Scarlet Ibis",
+			"African Spoonbill",
+			"Shoebill",
+			"Dalmatian Pelican",
+			"Brown Pelican",
+			"Northern Gannet",
+			"California Condor",
+			"Red Kite (bird of prey)",
+			"African White-backed Vulture",
+			"Bearded Vulture",
+			"Black-breasted Snake Eagle",
+			"Golden Eagle",
+			"Common Kestrel",
+			"Peregrine Falcon",
+			"Red-crowned Crane",
+			"Grey-crowned Crane",
+			"Red-legged Seriema",
+			"Pied Avocet",
+			"Wrybill",
+			"Long-tailed Jaeger",
+			"Herring Gull",
+			"Black Tern",
+			"Atlantic Puffin",
+			"Sulphur-crested Cockatoo",
+			"Crimson Rosella",
+			"Red-fanned Parrot",
+			"Hyacinth Macaw",
+			"Common Cuckoo",
+			"Barn Owl",
+			"Sunda Scops Owl",
+			"Eurasian Scops Owl",
+			"Spectacled Owl",
+			"Pel's Fishing Owl",
+			"Great Horned Owl",
+			"Snowy Owl",
+			"Tawny Owl",
+			"Pearl-spotted Owl",
+			"Morepork Owl",
+			"Burrowing Owl",
+			"Tawny Frogmouth Bird",
+			"Common Potoo",
+			"Common Nighthawk",
+			"Crimson Topaz",
+			"Bee Hummingbird",
+			"Common Swift",
+			"Violaceous Trogon",
+			"Great Horbill",
+			"European Bee-eater",
+			"European Roller Bird",
+			"Yellow-rumped Tinkerbird",
+			"Toco Toucan",
+			"Pittas Bird",
+			"Tapaculos",
+			"Scissor-Tailed Flycatcher",
+			"White-bearded Manakin",
+			"Lovely Cotinga",
+			"Bare-crowned Ant-bird",
+			"Blue-backed Manakin",
+			"Blue Wren",
+			"Brown Thornbill (warbler)",
+			"Yellow-throated Minivet",
+			"Bokmakieri",
+			"Chinspot Batis",
+			"Eurasian Jay",
+			"Raven",
+			"Eastern Black-headed Oriole",
+			"Fiscal Shrike",
+			"Japanese Waxwing",
+			"Scarlet Robin",
+			"Blue tit",
+			"Great tit",
+			"Long-tailed tit",
+			"Tawny-flanked Prinia",
+			"Horned Lark",
+			"Rufous Sibia",
+			"Blue-Gray Gnatcatcher",
+			"Golden-crowned Kinglet"
+		],
+		
+		"reptiles" : [
+			"Green Sea Turtle",
+			"Matamata",
+			"Snake-necked Turtle",
+			"Loggerhead Turtle",
+			"Common Snapping Turtle",
+			"Alligator Snapping Turtle",
+			"Carolina Box Turtle",
+			"Leatherback Turtle",
+			"Yellow-marginated Box Turtle",
+			"Stinkpot turtle",
+			"Chinese Soft-Shelled Turtle",
+			"Galapagos Tortoise",
+			"Tuatara",
+			"Calabar Ground Boa",
+			"Red-tailed Pipe Snake",
+			"Dumeril's Boa",
+			"Emerald Tree Boa",
+			"Children's Python",
+			"Green Anaconda",
+			"Burmese Python",
+			"Golden Flying Snake",
+			"Boomslang Snake",
+			"Mangrove Snake",
+			"Northern Death Adder",
+			"King Cobra",
+			"Egyptian Cobra",
+			"Viper",
+			"Rattlesnake",
+			"Frilled Lizard",
+			"Southern Angle-headed Lizard",
+			"Rainbow Lizard",
+			"Flying Lizard",
+			"Sailfin Lizard",
+			"Asian Water Dragon",
+			"Jackson's Chameleon",
+			"Central Bearded Dragon",
+			"Parson's Chameleon",
+			"North African Mastigura",
+			"Green Iguana",
+			"Marine Iguana",
+			"Rhinoceros Iguana",
+			"Casque-headed Iguana",
+			"Western Banded Gecko",
+			"African Fat-tailed Gecko",
+			"Leopard Gecko",
+			"Northern Leaf-tailed Gecko",
+			"Kuhl's Flying Gecko",
+			"Web-footed Gecko",
+			"Striped Day Gecko",
+			"Armadillo Lizard",
+			"Ibiza Wall Lizard",
+			"Solomon Islands Tree Skink",
+			"Pink-tailed Skink",
+			"African Fire Skink",
+			"Common Ameiva Lizard",
+			"Komodo Dragon",
+			"Savanna Monitor",
+			"Chinese Crocodile Lizard",
+			"American Alligator",
+			"Nile Crocodile",
+			"Spectacled Caiman Crocodile",
+			"Dwarf Crocodile",
+			"Gharial Crocodile",
+			"Greater Siren (amphibian)",
+			"Mudpuppy",
+			"Crocodile Newt",
+			"Fire Salamander",
+			"Pacific Giant Salamander",
+			"Axolotl",
+			"Mounty Dusky Salamander",
+			"Long-toed Salamander",
+			"Red Salamander",
+			"Arboreal Salamander",
+			"Ringed Caecilian",
+			"Oriental Fire-bellied Toad",
+			"Common Spadefoot Toad",
+			"Couch's Spadefoot Toad",
+			"Asian Spadefoot Toad",
+			"Holy Cross Toad",
+			"Corroboree Frog",
+			"Brown-striped Frog",
+			"Surinam Horned Frog",
+			"South American Bullfrog",
+			"Spix's Saddleback Toad",
+			"Golden Frog",
+			"Darwin's Frog",
+			"Cane Toad",
+			"Australian Green Treefrog",
+			"Red-eyed Treefrog",
+			"Strawberry Poison-dart Frog",
+			"Green Mantella Frog"
+		],
+		
+		"fish" : [
+			"Pike",
+			"Shortfin Mako Shark",
+			"Great White Shark",
+			"Whale Shark",
+			"Sperm Whale",
+			"Clown Fish",
+			"Humpback Whale",
+			"Narwhal",
+			"Blue Whale",
+			"Swordfish",
+			"Eel",
+			"Goldfish",
+			"Orca Whale",
+			"Dolphin",
+			"Starfish",
+			"Pistol Shrimp",
+			"Crab",
+			"Lobster",
+			"Anemone",
+			"Frilled Shark",
+			"Prickly Shark",
+			"Angular Roughshark",
+			"Bluntnose Six-gill Shark",
+			"Whale Shark",
+			"Basking Shark",
+			"Thresher Shark",
+			"Tiger Shark",
+			"Bull Shark",
+			"Blacktip Reef Shark",
+			"Blue Shark",
+			"Smooth Hammerhead Shark",
+			"Sand Devil Shark",
+			"Manta Ray",
+			"Common Eagle Ray",
+			"Clown Knifefisth",
+			"Arapaima Fish",
+			"European Eel",
+			"Gulper Eel",
+			"Halosaur Fish",
+			"Pelican Eel",
+			"American Shad Fish",
+			"Milkfish",
+			"Common Carp (fish)",
+			"Red Piranha",
+			"River Hatchetfish",
+			"Glass Catfish",
+			"Gafftopsail Sea Catfish",
+			"Atlantic Salmon",
+			"Sockeye Salmon",
+			"Sloane's Viperfish",
+			"Pacific Blackdragon Fish",
+			"Ventfish",
+			"Pacific Grenadier Fish",
+			"Humpback Anglerfish",
+			"Tropical Two-wing Flyingfish",
+			"Flashlight Fish",
+			"Weedy Seadragon",
+			"Common Fangtooth Fish",
+			"Yellowhead Jawfish",
+			"Giant Grouper Fish",
+			"Dolphinfish",
+			"Man-of-war Fish",
+			"Brown Meagre Fish",
+			"Spotted Archerfish",
+			"Emperor Angelfish",
+			"Copperband Butterflyfish",
+			"Tomato Clownfish",
+			"Oscar Fish",
+			"Orangespine Unicornfish",
+			"Swordfish",
+			"Northern Bluefin Tuna",
+			"Blue Marlin",
+			"Oceanic Sunfish",
+			"Clown Tiggerfish"
+		],
+		
+		"prehistoric" : [
+			"Stegasaurus",
+			"Triceratops",
+			"Hadrosaur",
+			"Ankylosaurus",
+			"Pachycephalosaurus",
+			"Brachiosaurus",
+			"Tyrannosaurus Rex",
+			"Velociraptor",
+			"Mammoth",
+			"Sabertooth cat",
+			"Megalodon"
+		],
+		
+		"mythologicalcreature" : [
+			"Minotaur",
+			"Centaur",
+			"Anubis",
+			"Sphinx",
+			"Pegasus",
+			"Faun",
+			"Dragon (Asia)",
+			"Dragon (Europe)",
+			"Chimaera",
+			"Mermaid",
+			"Siren",
+			"Demon",
+			"Angel",
+			"Archangel",
+			"Valkyrie",
+			"Faerie",
+			"Troll"
+		],
+			
+			
+			"chartype" : [
+				"Hero",
+				"Villain",
+				"Wise Elder",
+				"Stalwart Friend",
+				"Deceitful Crony",
+				"Town Drunk",
+				"Courageous Youth",
+				"Haggard Vagabond",
+				"Old Crone",
+				"Hag",
+				"Trusted Figurehead",
+				"Young Beauty",
+				"Female Warrior",
+				"Warrior",
+				"Chieftain",
+				"Matriarch"
+			],
+			
+			"race" : [
+				"Human",
+				"Elf",
+				"Dwarf",
+				"Orc",
+				"Vampire",
+				"Werewolf",
+				"Lich",
+				"Goblin",
+				"Lycanthrope",
+				"Shapeshifter",
+				"Gnome",
+				"Hobbit/Halfling",
+				"Zombie",
+				"Hellspawn",
+				"Ent",
+				"Troll",
+				"Faerie"
+			],
+			
+			"mythology" : [
+				"Ancient Greek",
+				"Ancient Egyptian",
+				"Norse",
+				"Pagan",
+				"Atlantis",
+			],
+			
+			"occupation" : [
+				"Paladin",
+				"Sorceress",
+				"Mage",
+				"Necromancer",
+				"Healer",
+				"Soldier",
+				"Scout",
+				"Archer",
+				"Wizard",
+				"Mercenary",
+				"Swordmaster",
+				"Demolition Expert",
+				"Sniper",
+				"Commando",
+				"Infantry",
+				"Witch",
+				"Maiden",
+				"King",
+				"Queen",
+				"Prince",
+				"Princess"
+			],
+			
+			"personality" : [
+				"Kind",
+				"Honest",
+				"Deceitful",
+				"Evil",
+				"Ill-tempered",
+				"Bashful",
+				"Angry",
+				"Melancholy",
+				"Scared",
+				"Afraid",
+				"Sad",
+				"Woeful",
+				"Abashed",
+				"Disgraceful"
+			],
+			
+			"landscape" : [
+				"Mountain",
+				"Plain",
+				"Ocean",
+				"River",
+				"Swamp",
+				"Forest",
+				"Lake",
+				"Bog",
+				"Fjord",
+				"Foothills",
+				"Clouds",
+				"Sky",
+				"Volcano",
+				"Tundra",
+				"Barren Land",
+				"Desert",
+				"Dunes"
+			],
+			
+			"location" : [
+				"Ancient Greece",
+				"Egypt",
+				"Constantinople",
+				"Ancient Rome",
+				"Warehouse",
+				"Laboratory",
+				"Cabin",
+				"Factory",
+				"Sewers",
+				"Haunted House",
+				"Asylum",
+				"Castle",
+				"Temple",
+				"Shrine",
+				"Home",
+				"Shack",
+				"Hanging Gardens",
+				"Tower",
+				"Spire",
+				"Escarpment",
+				"Overlook",
+				"Cliff",
+				"Beach",
+				"Shores",
+				"Docks",
+				"Port",
+				"Space station",
+				"Transportation Hub",
+				"Trainstation",
+				"Airport"
+			],
+			
+			"architecture" : [
+				"Gothic",
+				"Brutalism",
+				"Art Nouveau",
+				"Roman",
+				"Victorian",
+				"Colonnial",
+				"Mudhut"
+			],
+			
+			"planet" : [
+				"Earth",
+				"Moon",
+				"Saturn",
+				"Jupiter",
+				"Ganymede",
+				"Callisto",
+				"Io",
+				"Mercury",
+				"Venus",
+				"Mars",
+				"Uranus",
+				"Neptune",
+				"Pluto",
+				"Europa",
+				"Satellite",
+				"Space Station"
+			],
+			
+			"cars" : [
+				"Model T",
+				"Model A",
+				"Pickup Truck",
+				"Old Racer",
+				"Drag Racer",
+				"Cafe Racer Motorcycle",
+				"Chopper Motorcycle",
+				"Off-road Vehicle",
+				"SUV",
+				"Sports car",
+				"Sedan",
+				"Van",
+				"Concept car",
+				"Futuristic",
+				"Flying car",
+				"Train",
+				"Cargo truck",
+				"Garbage truck"
+			],
+			
+			"aircraft" : [
+				"Modern Fighter Jet",
+				"Helicopter",
+				"WW2 Fighter Jet",
+				"Commerical Airliner",
+				"Spaceship",
+				"Apache helicopter",
+				"Spitfire",
+				"Messerschmitt",
+				"Star Destroyer",
+				"Cargo hauler",
+				"Zeppelin",
+				"Hot air balloon",
+				"Jetpack"
+			],
+			
+			"military" : [
+				"Scout Car",
+				"WW2 Tank",
+				"Wheeled Military Vehicle",
+				"Bomber",
+				"Wheeled Tank",
+				"Aircraft carrier",
+				"Troop transport",
+				"Sherman Tank",
+				"Tiger Tank",
+				"Ferrett Scout Car"
+			],
+			
+			"boats" : [
+				"Speed Boat",
+				"Pirate Ship",
+				"Viking Ship",
+				"Dragon Boat",
+				"Sail Boat",
+				"Submarine",
+				"U-boat",
+				"Icebreaker",
+				"Tug boat",
+				"Aircraft carrier",
+				"Canoe",
+				"Kayak",
+				"Paddle boat",
+				"Dingy",
+			],
+			
+			"projweapon" : [
+				"Pistol",
+				"Rifle",
+				"Shotgun",
+				"Sniper Rifle",
+				"Plasma Rifle",
+				"Grenade Launcher",
+				"Rocket Launcher",
+				"Blow dart",
+				"Thermal Detonator",
+				"Napalm",
+				"Mortar",
+				"Crossbow",
+				"Bow and Arrow",
+				"Grenade",
+				"Trebuchet",
+				"Catapult"
+			],
+			
+			"meleeweapon" : [
+				"Broad Sword",
+				"Scimitar",
+				"Club",
+				"Bowstaff",
+				"Lightsaber",
+				"Axe",
+				"Morningstar",
+				"Hammer",
+				"Nunchucks",
+				"Brass Knuckles",
+				"Dagger",
+				"Dirk",
+				"Shiv",
+				"Lead pipe",
+				"Crowbar"
+			],
+			
+			"props" : [
+				"Cargo box",
+				"Lamp",
+				"Fuel Tank",
+				"Storage Container",
+				"Binoculars",
+				"Table",
+				"Bookshelf",
+				"Desk",
+				"Liquid Tank",
+				"Armoire",
+				"Walkie-Talkie",
+				"Tracking Device",
+				"Monitor",
+				"Backpack",
+				"Power supply",
+				"Ammo pack",
+				"Health pack",
+				"First-aid Kit",
+				"Flashlight / Torch",
+				"Helmet",
+				"Mask",
+				"Staff",
+				"Boots",
+				"Oxygen Tank",
+				"Fuel Source"
+			],
+			
+			"none" : [
+				"",
+			],
+			
+			};
+		
+		function submit() {
+			var firstSeperator = ", ";
+			var secondSeperator = ", ";
+			var firstName = document.getElementById("firstName");
+			var firstTemp = firstName.value;
+			var whatVar = dictionary[firstTemp];
+			if (firstTemp == "animals") {
+				whatVar = dictionary["mammals"].concat(dictionary["insects"], dictionary["birds"], dictionary["reptiles"], dictionary["fish"], dictionary["prehistoric"], dictionary["mythologicalcreature"]);
+			} else if (firstTemp == "characters") {
+				whatVar = dictionary["chartype"].concat(dictionary["race"], dictionary["mythology"], dictionary["occupation"], dictionary["personality"]);
+			} else if (firstTemp == "environments") {
+				whatVar = dictionary["landscape"].concat(dictionary["location"], dictionary["architecture"], dictionary["planet"]);
+			} else if (firstTemp == "vehicles") {
+				whatVar = dictionary["cars"].concat(dictionary["aircraft"], dictionary["military"], dictionary["boats"], dictionary["projweapon"], dictionary["meleeweapon"], dictionary["props"]);
+			} else if (firstTemp == "all") {
+				whatVar = dictionary["mammals"].concat(dictionary["insects"], dictionary["birds"], dictionary["reptiles"], dictionary["fish"], dictionary["prehistoric"], dictionary["mythologicalcreature"], dictionary["chartype"], dictionary["race"], dictionary["mythology"], dictionary["occupation"], dictionary["personality"], dictionary["landscape"], dictionary["location"], dictionary["architecture"], dictionary["planet"], dictionary["cars"], dictionary["aircraft"], dictionary["military"], dictionary["boats"], dictionary["projweapon"], dictionary["meleeweapon"], dictionary["props"]);
+			}
+			;
+			
+			if (firstTemp == "none") {
+				firstSeperator = "";
+			} else {
+				firstSeperator = ", ";
+			}
+			
+			var secondName = document.getElementById("secondName");
+			var secondTemp = secondName.value;
+			var whatVar2 = dictionary[secondTemp];
+			if (secondTemp == "animals") {
+				whatVar2 = dictionary["mammals"].concat(dictionary["insects"], dictionary["birds"], dictionary["reptiles"], dictionary["fish"], dictionary["prehistoric"], dictionary["mythologicalcreature"]);
+			} else if (secondTemp == "characters") {
+				whatVar2 = dictionary["chartype"].concat(dictionary["race"], dictionary["mythology"], dictionary["occupation"], dictionary["personality"]);
+			} else if (secondTemp == "environments") {
+				whatVar2 = dictionary["landscape"].concat(dictionary["location"], dictionary["architecture"], dictionary["planet"]);
+			} else if (secondTemp == "vehicles") {
+				whatVar2 = dictionary["cars"].concat(dictionary["aircraft"], dictionary["military"], dictionary["boats"], dictionary["projweapon"], dictionary["meleeweapon"], dictionary["props"]);
+			} else if (secondTemp == "all") {
+				whatVar2 = dictionary["mammals"].concat(dictionary["insects"], dictionary["birds"], dictionary["reptiles"], dictionary["fish"], dictionary["prehistoric"], dictionary["mythologicalcreature"], dictionary["chartype"], dictionary["race"], dictionary["mythology"], dictionary["occupation"], dictionary["personality"], dictionary["landscape"], dictionary["location"], dictionary["architecture"], dictionary["planet"], dictionary["cars"], dictionary["aircraft"], dictionary["military"], dictionary["boats"], dictionary["projweapon"], dictionary["meleeweapon"], dictionary["props"]);
+			}
+			;
+			
+			if (secondTemp == "none") {
+				secondSeperator = "";
+			} else {
+				secondSeperator = ", ";
+			}
+			
+			
+			var thirdName = document.getElementById("thirdName");
+			var thirdTemp = thirdName.value;
+			var whatVar3 = dictionary[thirdTemp];
+			if (thirdTemp == "animals") {
+				whatVar3 = dictionary["mammals"].concat(dictionary["insects"], dictionary["birds"], dictionary["reptiles"], dictionary["fish"], dictionary["prehistoric"], dictionary["mythologicalcreature"]);
+			} else if (thirdTemp == "characters") {
+				whatVar3 = dictionary["chartype"].concat(dictionary["race"], dictionary["mythology"], dictionary["occupation"], dictionary["personality"]);
+			} else if (thirdTemp == "environments") {
+				whatVar3 = dictionary["landscape"].concat(dictionary["location"], dictionary["architecture"], dictionary["planet"]);
+			} else if (thirdTemp == "vehicles") {
+				whatVar3 = dictionary["cars"].concat(dictionary["aircraft"], dictionary["military"], dictionary["boats"], dictionary["projweapon"], dictionary["meleeweapon"], dictionary["props"]);
+			} else if (thirdTemp == "all") {
+				whatVar3 = dictionary["mammals"].concat(dictionary["insects"], dictionary["birds"], dictionary["reptiles"], dictionary["fish"], dictionary["prehistoric"], dictionary["mythologicalcreature"], dictionary["chartype"], dictionary["race"], dictionary["mythology"], dictionary["occupation"], dictionary["personality"], dictionary["landscape"], dictionary["location"], dictionary["architecture"], dictionary["planet"], dictionary["cars"], dictionary["aircraft"], dictionary["military"], dictionary["boats"], dictionary["projweapon"], dictionary["meleeweapon"], dictionary["props"]);
+			}
+			;
+			/*
+			if (firstTemp == "mammals") {
+				whatVar = mammals.slice(0);
+			} else if (firstTemp == "insects") {
+				whatVar = insects.slice(0);
+			} else if (firstTemp == "birds") {
+				whatVar = birds.slice(0);
+			} else if (firstTemp == "reptiles") {
+				whatVar = reptiles.slice(0);
+			} else if (firstTemp == "fish") {
+				whatVar = fish.slice(0);
+			} else if (firstTemp == "prehistoric") {
+				whatVar = prehistoric.slice(0);
+			} else if (firstTemp == "animals") {
+				whatVar = mammals.concat(insects, birds, reptiles, fish, prehistoric);
+			}*/
+			random_items(whatVar);
+			random_items2(whatVar2);
+			random_items3(whatVar3);
+			
+			var resultsp = document.getElementById("resultsp");
+			resultsp.innerText = random_items(whatVar) + firstSeperator + random_items2(whatVar2) + secondSeperator + random_items3(whatVar3);
+			
+			function random_items(firstName)
+			{
+				return whatVar[Math.floor(Math.random()*whatVar.length)];
+			}
+			function random_items2(secondName)
+			{
+				return whatVar2[Math.floor(Math.random()*whatVar2.length)];
+			}
+			function random_items3(thirdName)
+			{
+				return whatVar3[Math.floor(Math.random()*whatVar3.length)];
+			}
+			
+			var results = document.getElementsByClassName("resultscontainer")[0];
+			results.style.display = "block";
+		}
+	</script>
+	
+</body>
+</html>
